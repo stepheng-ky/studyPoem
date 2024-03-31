@@ -1,0 +1,7 @@
+<view class="container">
+  <button bindtap="goToCreatePlan" class="button">新建学习计划</button>
+  <button bindtap="goToProgress" class="button">显示学习进度</button>
+  <button bindtap="goToStartLearning" class="button">开始学习</button>
+  <button bindtap="goToViewPlan" class="button">查看学习计划</button>
+  <button bindtap="goToPoemLibrary" class="button">查看诗词库</button>
+</view>

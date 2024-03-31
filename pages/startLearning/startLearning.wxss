@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.poem-details {
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'Times New Roman', serif;
+  margin-bottom: 10px;
+}
+
+.content {
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+}

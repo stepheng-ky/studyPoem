@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="learned-poems">
+    <view class="title">已学习诗词</view>
+    <block wx:for="{{learnedPoems}}" wx:key="index">
+      <view class="poem-item learned">{{item.title}}</view>
+    </block>
+  </view>
+  <view class="unlearned-poems">
+    <view class="title">未学习诗词</view>
+    <block wx:for="{{unlearnedPoems}}" wx:key="index">
+      <view class="poem-item unlearned">{{item.title}}</view>
+    </block>
+  </view>
+</view>

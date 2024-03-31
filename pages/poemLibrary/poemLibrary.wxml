@@ -1,0 +1,10 @@
+<view class="container">
+  <input placeholder="搜索诗词" bindinput="searchPoems" class="search-input" />
+  <view class="poem-list">
+    <block wx:for="{{poems}}" wx:key="index">
+      <view class="poem-item" bindtap="viewPoemDetail" data-index="{{index}}">
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+</view>

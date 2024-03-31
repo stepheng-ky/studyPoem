@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="poem-list">
+    <block wx:for="{{poems}}" wx:key="index">
+      <view class="poem-item">
+        <checkbox value="{{item.checked}}" bindchange="selectPoem" data-index="{{index}}"></checkbox>
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+  <button bindtap="generatePlan" class="button">生成学习计划</button>
+</view>
