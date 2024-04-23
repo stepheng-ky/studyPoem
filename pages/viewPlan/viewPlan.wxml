@@ -8,6 +8,7 @@
   <view class="edit-buttons">
     <button bindtap="addPoem">增加诗词</button>
     <button bindtap="deletePoem">删除诗词</button>
-    <button bindtap="modifyOrder">修改顺序</button>
+    <button bindtap="modifyOrder">修改顺序测试</button>
   </view>
 </view>
+
