@@ -1,20 +1,43 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/createPlan/createPlan",
-    "pages/progress/progress",
-    "pages/startLearning/startLearning",
-    "pages/viewPlan/viewPlan",
-    "pages/poemLibrary/poemLibrary"
+    "pages/discovery/discovery",
+    "pages/study/study",
+    "pages/library/library",
+    "pages/mine/mine"
   ],
-  "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarBackgroundColor": "#ffffff"
-  },
-  "style": "v2",
-  "componentFramework": "glass-easel",
-  "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/app/index.png",
+        "selectedIconPath": "img/app/index-selected.png"
+      },
+      {
+        "pagePath": "pages/discovery/discovery",
+        "text": "发现",
+        "iconPath": "img/app/discovery.png",
+        "selectedIconPath": "img/app/discovery-selected.png"
+      },
+      {
+        "pagePath": "pages/study/study",
+        "text": "学习",
+        "iconPath": "img/app/study.png",
+        "selectedIconPath": "img/app/study-selected.png"
+      },
+      {
+        "pagePath": "pages/library/library",
+        "text": "诗库",
+        "iconPath": "img/app/library.png",
+        "selectedIconPath": "img/app/library-selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "img/app/mine.png",
+        "selectedIconPath": "img/app/mine-selected.png"
+      }
+    ]
+  }
 }

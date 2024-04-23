@@ -1,7 +1,13 @@
-<view class="container">
-  <button bindtap="goToCreatePlan" class="button">新建学习计划</button>
-  <button bindtap="goToProgress" class="button">显示学习进度</button>
-  <button bindtap="goToStartLearning" class="button">开始学习</button>
-  <button bindtap="goToViewPlan" class="button">查看学习计划</button>
-  <button bindtap="goToPoemLibrary" class="button">查看诗词库</button>
+<view class="page" style="background-image: url({{backgroundImg}})">
+  <view class="container">
+    <view class="poem-author">
+      <text wx:for="{{currentPoemAuthor}}" wx:for-item="line" >{{line}}</text>
+    </view>
+    <view class="poem-content0">
+      <text  wx:for="{{currentPoemContent0}}" wx:for-item="line" >{{line}}</text>
+    </view>
+    <view class="poem-content1">
+      <text  wx:for="{{currentPoemContent1}}" wx:for-item="line" >{{line}}</text>
+    </view>
+  </view>
 </view>

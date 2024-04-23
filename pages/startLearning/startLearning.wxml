@@ -1,7 +1,0 @@
-<view class="container">
-  <view class="poem-details">
-    <view class="title">{{poem.title}}</view>
-    <view class="author">作者：{{poem.author}}</view>
-    <view class="content">{{poem.content}}</view>
-  </view>
-</view>

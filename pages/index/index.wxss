@@ -1,16 +1,49 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.page {
+  width: 100vw;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
-.button {
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+.container {
+  padding: 20rpx;
+}
+
+.poem-author {
+  font-size: 20px;
+  color: white;
+  position: fixed; 
+  bottom: 60rpx;
+  left: 60rpx;
+  /* 使用flex布局，使内容竖直排列 */
+  display: flex;
+  flex-direction: column;
+  font-weight: bold; /* 设置加粗 */
+}
+
+.poem-content0 {
+  /* 设置字体大小为20像素 */
+  font-size: 20px;
+  /* 设置文字颜色为白色 */
+  color: white;
+  /* 将元素固定在页面上，并距离页面顶部30rpx，距离页面右侧30rpx */
+  position: fixed;
+  top: 100rpx;
+  right: 100rpx;
+  /* 使用flex布局，使内容竖直排列 */
+  display: flex;
+  flex-direction: column;
+}
+.poem-content1 {
+  /* 设置字体大小为20像素 */
+  font-size: 20px;
+  /* 设置文字颜色为白色 */
+  color: white;
+  /* 将元素固定在页面上，并距离页面顶部30rpx，距离页面右侧30rpx */
+  position: fixed;
+  top: 170rpx;
+  right: 170rpx;
+  /* 使用flex布局，使内容竖直排列 */
+  display: flex;
+  flex-direction: column;
 }
