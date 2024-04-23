@@ -1,22 +1,42 @@
-.container {
-  padding: 20rpx;
-}
+  .container {
+    position: relative;
+    padding: 80rpx;
+  }
 
-.poem-list {
-  margin-bottom: 20rpx;
-}
+  .poem-list {
+    margin-bottom: 20rpx;
+  }
 
-.poem-item {
-  display: flex;
-  align-items: center;
-}
+  .poem-item {
+    display: flex;
+    align-items: center;
+  }
 
-.button {
-  width: 100%;
-  padding: 10rpx;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 5rpx;
-  text-align: center;
-}
+  .button {
+    width: 100%;
+    padding: 10rpx;
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  .copy-button{
+    position: absolute; /*绝对定位*/
+    top: 4rpx; /*设置距离顶部的距离*/
+    right: 20rpx;  /*设置距离右侧的距离*/
+    max-width: 90px; /* 设置最大宽度 */
+    padding: 5rpx; /*设置内边距*/
+    background-color: #3498db; /*背景颜色*/
+    color: #fff; /*文本颜色*/
+    font-size: 14px; /* 设置按钮字体大小 */
+  }
+  .see-copy-button{
+    position: absolute; /*绝对定位*/
+    top: 60rpx; /*设置距离顶部的距离*/
+    right: 20rpx;  /*设置距离右侧的距离*/
+    max-width: 90px; /* 设置最大宽度 */
+    padding: 5rpx; /*设置内边距*/
+    background-color: #3498db; /*背景颜色*/
+    color: #fff; /*文本颜色*/
+    font-size: 14px; /* 设置按钮字体大小 */
+  }
+  
