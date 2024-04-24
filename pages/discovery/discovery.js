@@ -1,66 +1,33 @@
 // pages/discovery/discovery.js
-Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
-})
+// discovery.js  
+Page({  
+  data: {  
+    searchInput: '' // 存储输入框的内容  
+  },  
+    
+  handleInput: function(e) {  
+    // 获取输入框的内容  
+    const value = e.detail.value;  
+    // 更新数据  
+    this.setData({  
+      searchInput: value  
+    });  
+  },  
+    
+  handleSearch: function() {  
+    // 获取输入框的内容  
+    const searchInput = this.data.searchInput;  
+    // 如果输入内容不为空，则跳转到搜索结果页面  
+    if (searchInput) {  
+      wx.navigateTo({  
+        url: '/pages/search-result/search-result?query=' + encodeURIComponent(searchInput)  
+      });  
+    } else {  
+      // 提示用户输入内容  
+      wx.showToast({  
+        title: '请输入搜索内容',  
+        icon: 'none'  
+      });  
+    }  
+  }  
+});

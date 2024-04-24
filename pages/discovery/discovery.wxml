@@ -1,2 +1,10 @@
-<!--pages/discovery/discovery.wxml-->
-<text>pages/discovery/discovery.wxml</text>
+<!-- pages/discovery/discovery.wxml -->  
+  
+<view class="container">  
+  <image class="banner" src="img/banner1.png" mode="aspectFill"></image>  
+  <view class="search-bar">  
+    <input type="text" placeholder="搜索诗词、作者、朝代" bindinput="handleInput" class="search-input" />  
+    <button bindtap="handleSearch">搜索</button>  
+  </view>  
+  <text class="search-tip">请输入关键字检索诗词名称/诗词内容/诗词作者/朝代等。</text>  
+</view>

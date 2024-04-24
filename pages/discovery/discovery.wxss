@@ -1,1 +1,59 @@
-/* pages/discovery/discovery.wxss */
+/* pages/discovery/discovery.wxss */  
+/* 设置页面的容器样式 */  
+.container {    
+  display: flex; /* 使用弹性布局 */    
+  flex-direction: column; /* 弹性子项垂直排列 */    
+  height: 100vh; /* 设置容器高度为视口高度 */    
+  background-color: #f3eeee96; /* 设置背景颜色为浅灰色半透明 */  
+}    
+  
+/* 设置页面的 banner 样式 */  
+.banner {    
+  width: 100%; /* 宽度占满整个容器 */    
+  height: 30vh; /* 高度为视口高度的30% */    
+  position: fixed; /* 固定定位，不随页面滚动 */    
+  top: 0; /* 顶部对齐 */    
+  z-index: 10; /* 设置元素的堆叠顺序，确保在内容之上 */    
+}    
+  
+/* 设置搜索框的样式 */  
+.search-bar {    
+  display: flex; /* 使用弹性布局 */    
+  justify-content: center; /* 子项在水平方向上居中 */    
+  align-items: center; /* 子项在垂直方向上居中 */    
+  width: 80%; /* 宽度为容器宽度的80% */    
+  margin-top: 30vh; /* 距离页面顶部的间距为视口高度的30% */    
+}    
+  
+/* 设置输入框的样式 */  
+input {    
+  flex: 1; /* 弹性布局中占据剩余空间 */    
+  height: 30px; /* 高度为30像素 */    
+  padding: 5px; /* 内边距为5像素 */    
+  border-radius: 5px; /* 边框圆角为5像素 */    
+  border: 1px solid #ccc; /* 边框为1像素宽，颜色为灰色 */    
+  margin-right: 10px; /* 右侧外边距为10像素，用于与按钮分隔 */    
+}    
+
+  
+/* 设置搜索按钮的样式 */  
+button {    
+  height: 30px; /* 高度为30像素 */    
+  padding: 5px 10px; /* 内边距为上下5像素，左右10像素 */    
+  border-radius: 5px; /* 边框圆角为5像素 */    
+  background-color: #007aff; /* 背景色为深蓝色 */    
+  color: white; /* 文本颜色为白色 */    
+  border: none; /* 无边框 */    
+  font-size: 15px; /* 字体大小为15像素 */    
+  text-align: center; /* 文本水平居中 */    
+  line-height: 20px; /* 行高为20像素，用于垂直居中文本 */    
+}  
+  
+/* 设置搜索提示文本的样式 */  
+.search-tip {    
+  position: relative; 
+  top: -140rpx;
+  width: 80%; /* 宽度为容器宽度的80% */    
+  color: #666; /* 文本颜色为深灰色 */    
+  font-size: 14px; /* 字体大小为14像素 */    
+}

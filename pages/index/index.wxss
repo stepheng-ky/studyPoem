@@ -1,49 +1,54 @@
+
 .page {
   width: 100vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
+  background-color: #dad2d296;/* 背景颜色 */
 }
 
 .container {
   padding: 20rpx;
+  width: 85%;
+  height: 88%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .poem-author {
-  font-size: 20px;
-  color: white;
-  position: fixed; 
-  bottom: 60rpx;
-  left: 60rpx;
-  /* 使用flex布局，使内容竖直排列 */
-  display: flex;
-  flex-direction: column;
+  font-size: 25px;/* 设置字体大小 */
+  color: black;/* 设置文字颜色 */
+  position: fixed;/* 将元素固定在页面上 */
+  bottom: 60rpx;/* 距离页面底部 */
+  left: 60rpx;/* 距离页面左侧 */ 
+  display: flex;/* 使用flex布局 */
+  flex-direction: column; /* 使内容竖直排列 */
   font-weight: bold; /* 设置加粗 */
+  font-family: '华文隶书'; /* 设置字体*/
 }
 
+/* 第一句 */
 .poem-content0 {
-  /* 设置字体大小为20像素 */
-  font-size: 20px;
-  /* 设置文字颜色为白色 */
-  color: white;
-  /* 将元素固定在页面上，并距离页面顶部30rpx，距离页面右侧30rpx */
-  position: fixed;
-  top: 100rpx;
-  right: 100rpx;
-  /* 使用flex布局，使内容竖直排列 */
-  display: flex;
-  flex-direction: column;
+  font-size: 28px;/* 设置字体大小 */
+  color: black;/* 设置文字颜色 */
+  position: fixed;/* 将元素固定在页面上 */
+  top: 100rpx; /* 距离页面顶部 */
+  right: 100rpx;/* 距离页面右侧 */ 
+  display: flex;/* 使用flex布局 */
+  flex-direction: column; /* 使内容竖直排列 */
+  font-family: '华文隶书'; /* 设置字体 */
 }
+/* 第二句 */
 .poem-content1 {
-  /* 设置字体大小为20像素 */
-  font-size: 20px;
-  /* 设置文字颜色为白色 */
-  color: white;
-  /* 将元素固定在页面上，并距离页面顶部30rpx，距离页面右侧30rpx */
-  position: fixed;
-  top: 170rpx;
-  right: 170rpx;
-  /* 使用flex布局，使内容竖直排列 */
-  display: flex;
-  flex-direction: column;
+  font-size: 28px;/* 设置字体大小 */
+  color: black;/* 设置文字颜色 */
+  position: fixed;/* 将元素固定在页面上 */
+  top: 170rpx; /* 距离页面顶部 */
+  right: 190rpx;/* 距离页面右侧 */ 
+  display: flex;/* 使用flex布局 */
+  flex-direction: column; /* 使内容竖直排列 */
+  font-family: '华文隶书'; /* 设置字体 */
 }
