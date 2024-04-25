@@ -52,7 +52,7 @@ button {
 /* 设置搜索提示文本的样式 */  
 .search-tip {    
   position: relative; 
-  top: -140rpx;
+  top: -70px;
   width: 80%; /* 宽度为容器宽度的80% */    
   color: #666; /* 文本颜色为深灰色 */    
   font-size: 14px; /* 字体大小为14像素 */    

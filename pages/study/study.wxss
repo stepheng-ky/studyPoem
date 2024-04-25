@@ -1,1 +1,107 @@
-/* pages/study/study.wxss */
+/* pages/study/study.wxss */ /* 定义study页面的样式表 */  
+  
+.study-container {  
+  padding: 35rpx; /*设置容器的内边距 */ 
+  background-color: #f0f0f096; /* 设置背景颜色为浅灰色半透明 */  
+  height: 100vh; /* 设置容器高度为视口高度 */    
+}  
+  
+/* 计划名 */
+.plan-name {  
+  font-size: 20px; /* 设置字体大小 */  
+  font-weight: bold; /* 设置字体加粗 */  
+  margin-bottom: 20rpx; /* 设置元素下方的外边距 */  
+}  
+  
+/* 线条 */
+.plan-line {  
+  width: 100%;  
+  height: 2px;  
+  background-color: lightgrey; /* 灰色线条颜色 */  
+  margin-top: 20rpx; /* 与计划名之间的间距 */  
+  margin-bottom: 40rpx; /* 与进度信息之间的间距 */  
+}  
+/* 线条2 */
+.progress-line {  
+  width: 100%;  
+  height: 6px;  
+  background-color: lightgrey; /* 灰色线条颜色 */  
+  margin-top: 30rpx; /* 与计划名之间的间距 */  
+  margin-bottom: 50rpx; /* 与进度信息之间的间距 */  
+}  
+/* 进度信息的容器样式 */  
+.progress-info {  
+  display: flex; /* 使用弹性布局 */  
+  justify-content: space-between; /* 子元素平均分布 */  
+}  
+  
+.progress-data-wrapper {  
+  display: flex;  /* 使用弹性布局，允许子元素在容器内进行灵活的排列 */  
+  flex-direction: column;  /* 设置弹性子元素的方向为垂直排列 */  
+  justify-content: flex-start; /* 子元素顶部对齐 */  
+  width: calc(33.33% - 20rpx); /* 减去间隔，确保三个容器宽度相等 */  
+  margin-right: 20rpx; /* 元素间的间隔 */  
+  color: grey; /* 字体颜色 */
+}  
+  
+.progress-data-wrapper:last-child {  
+  margin-right: 0; /* 最后一个元素不需要右边距 */  
+}  
+  
+.progress-title {  
+  font-size: 15px; /* 设置字体大小 */  
+  font-weight: bold; /* 标题加粗 */  
+  margin-bottom: 10rpx; /* 与数据之间的间距 */  
+}  
+  
+.progress-data {  
+  font-size: 12px; /* 设置字体大小 */  
+  flex-grow: 1; /* 尝试填充可用空间 */  
+}
+
+
+.tab-bar {  
+  display: flex;  
+  justify-content: space-between;  
+  padding: 10px 0; /* 移除了上下内边距，仅保留左右内边距 */  
+}  
+  
+.tab-bar button {  
+  width: 50%;  
+  height: 40px;  
+  line-height: 40px;  
+  text-align: center;  
+  border: none; /* 移除了边框 */  
+  border-bottom: 2px solid transparent; /* 添加了透明的底部线条 */  
+  font-weight: normal; /* 设置正常字体粗细 */  
+  color: lightgrey; /* 未选中时字体颜色较浅 */  
+  transition: all 0.3s ease; /* 添加过渡效果 */  
+}  
+  
+.tab-bar button.active {  
+  border-bottom-color: rgb(238, 194, 194); /* 选中时底部线条颜色变深 */  
+  color: black; /* 选中时字体颜色变深 */  
+}
+  
+.poem-list {  
+  margin-top: 10px;  
+}  
+  
+.poem-item {  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  padding: 10px;  
+  border-bottom: 1px solid #ddd;  
+}  
+.all-learned-message, .no-learned-message {  
+  padding: 100rpx;  
+  text-align: center;  
+  font-weight: bold;  
+}
+.all-learned-message {  
+  color: rgb(39, 194, 39);  
+}
+.no-learned-message {  
+  color: red;  
+}
