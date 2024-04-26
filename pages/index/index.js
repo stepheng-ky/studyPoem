@@ -5,6 +5,8 @@ Page({
     currentPoemzhailu1: '',
   },
   onLoad: function () {
+    // 保存当前页面的this引用  
+    const that = this; 
     // 发起网络请求获取随机诗词  
     wx.request({  
       url: 'https://guomuyi.com/studypoem/random_poem', // 接口地址  
@@ -15,9 +17,10 @@ Page({
           // 接口返回的数据结构是 {"author":"","content":"","id":"","title":"","yiwen":","zhailu":""}
           const { author, zhailu } = res.data;  
           const zhailuLines = zhailu.split('\\n'); // 注意这里使用双反斜杠来匹配接口返回数据中的换行符  
-  
+          console.log('author',author);
+          console.log('zhailuLines',zhailuLines);
           // 设置数据到页面  
-          this.setData({  
+          that.setData({  
             currentPoemAuthor: author,  
             currentPoemzhailu0: zhailuLines[0],  
             currentPoemzhailu1: zhailuLines.length > 1 ? zhailuLines[1] : '' // 确保有第二句才设置  
