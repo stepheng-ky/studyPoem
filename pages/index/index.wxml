@@ -4,10 +4,10 @@
       <text wx:for="{{currentPoemAuthor}}" wx:for-item="line" >{{line}}</text>
     </view>
     <view class="poem-content0">
-      <text  wx:for="{{currentPoemContent0}}" wx:for-item="line" >{{line}}</text>
+      <text  wx:for="{{currentPoemzhailu0}}" wx:for-item="line" >{{line}}</text>
     </view>
     <view class="poem-content1">
-      <text  wx:for="{{currentPoemContent1}}" wx:for-item="line" >{{line}}</text>
+      <text  wx:for="{{currentPoemzhailu1}}" wx:for-item="line" >{{line}}</text>
     </view>
   </view>
 </view>
