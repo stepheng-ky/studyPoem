@@ -4,7 +4,8 @@
     "pages/discovery/discovery",
     "pages/study/study",
     "pages/library/library",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/poemDetail/poemDetail"
   ],
   "tabBar": {
     "list": [

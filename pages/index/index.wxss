@@ -52,3 +52,14 @@
   flex-direction: column; /* 使内容竖直排列 */
   font-family: '华文隶书'; /* 设置字体 */
 }
+/* 第3句 */ 
+.poem-content2 {
+  font-size: 28px;/* 设置字体大小 */
+  color: black;/* 设置文字颜色 */
+  position: fixed;/* 将元素固定在页面上 */
+  top: 240rpx; /* 距离页面顶部 */
+  right: 280rpx;/* 距离页面右侧 */ 
+  display: flex;/* 使用flex布局 */
+  flex-direction: column; /* 使内容竖直排列 */
+  font-family: '华文隶书'; /* 设置字体 */
+}

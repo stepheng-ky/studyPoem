@@ -1,5 +1,5 @@
 <view class="page" style="background-image: url({{backgroundImg}})">
-  <view class="container">
+  <view class="container" bindtap="goToPoemDetails">
     <view class="poem-author">
       <text wx:for="{{currentPoemAuthor}}" wx:for-item="line" >{{line}}</text>
     </view>
@@ -9,5 +9,9 @@
     <view class="poem-content1">
       <text  wx:for="{{currentPoemzhailu1}}" wx:for-item="line" >{{line}}</text>
     </view>
+    <view class="poem-content2">
+      <text  wx:for="{{currentPoemzhailu2}}" wx:for-item="line" >{{line}}</text>
+    </view>
   </view>
 </view>
+
