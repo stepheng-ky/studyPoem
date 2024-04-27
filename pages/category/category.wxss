@@ -26,3 +26,8 @@
   font-size: 35rpx;
   display: flex; /* 使用flex布局使内容居中 */  
 }
+.no-poems-tip{
+  font-size: 38rpx;
+  color: red;
+  margin-top: 100rpx;     
+}
