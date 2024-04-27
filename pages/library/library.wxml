@@ -1,2 +1,9 @@
 <!--pages/library/library.wxml-->
-<text>pages/library/library.wxml</text>
+<view class="container">  
+  <view class="category-container">  
+    <block wx:for="{{categoryNames}}" wx:key="index">  
+      <text class="category-name" wx:if="{{index % 2 == 0}}" bindtap="goToCategory" data-index="{{index}}">{{item}}</text>  
+      <text class="category-name" wx:if="{{index % 2 != 0}}" bindtap="goToCategory" data-index="{{index}}">{{item}}</text>  
+    </block>  
+  </view> 
+</view>

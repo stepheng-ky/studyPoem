@@ -1,0 +1,9 @@
+<!--pages/category/category.wxml-->
+<view class="container">  
+  <view class="category-container">  
+    <block wx:for="{{category.poems}}" wx:key="*this" wx:for-index="index">  
+      <text class="category-title" bindtap="goToPoemDetails" data-index="{{index}}">{{item.title}} ({{item.author_short}})</text>  
+      <text class="category-author">{{item.second_level_category}} </text>  
+    </block>  
+  </view> 
+</view>

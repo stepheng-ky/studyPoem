@@ -5,7 +5,8 @@
     "pages/study/study",
     "pages/library/library",
     "pages/mine/mine",
-    "pages/poemDetail/poemDetail"
+    "pages/poemDetail/poemDetail",
+    "pages/category/category"    
   ],
   "tabBar": {
     "list": [

@@ -26,11 +26,11 @@ Page({
       success: function (res) {  
         if (res.data && res.statusCode === 200) {  
           const poem = res.data;
-          console.log('content-改前：',poem.content);
           poem.content = poem.content.replace(/\\n/g, '<br>');
           poem.yiwen = poem.yiwen.replace(/\\n/g, '<br>');
           poem.zhailu = poem.zhailu.replace(/\\n/g, '<br>');
-          console.log('content-改后：',poem.content);
+          // 动态修改导航栏标题
+          wx.setNavigationBarTitle({ title: poem.title });
           that.setData({  
             poem 
           });  
