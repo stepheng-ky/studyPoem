@@ -9,7 +9,10 @@
   display: flex; /* 将页面设置为 Flex 容器 */  
   flex-direction: column;  /* 设置弹性子元素的方向为垂直排列 */  
 }  
-
+.poem-content-page {  
+  display: flex;  
+  flex-direction: column;  
+}  
 .poem-header {  
   display: flex;  
   flex-direction: column;  
@@ -24,11 +27,15 @@
 }  
   
 .poem-author {  
-  font-size: 30rpx;  
+  font-size: 30rpx; 
+  position: relative;
+  right: -150rpx;
 }  
   
 .poem-content {  
   margin-top: 20rpx;  
+  /* margin-left: 160rpx;  
+  margin-right: 160rpx;   */
   font-size: 35rpx;  
   line-height: 1.8;  
   margin-bottom: 20rpx;  

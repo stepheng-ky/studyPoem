@@ -1,12 +1,14 @@
 <!-- poemDetails.wxml -->  
 <view class="poem-details-page">  
-  <view class="poem-header">  
-    <text class="poem-title">{{poem.title}}</text>  
-    <text class="poem-author">{{poem.author}}</text>  
-  </view>  
-  <view class="poem-content">  
-    <rich-text nodes="{{poem.content}}"></rich-text>  
-  </view>  
+  <view class="poem-content-page" >
+    <view class="poem-header">  
+      <text class="poem-title">{{poem.title}}</text>  
+      <text class="poem-author">{{poem.author}}</text>  
+    </view>  
+    <view class="poem-content">  
+      <rich-text nodes="{{poem.content}}"></rich-text>  
+    </view>  
+  </view>
   <view class="poem-yiwen-title">  
     <text>注释\n</text>  
   </view>  

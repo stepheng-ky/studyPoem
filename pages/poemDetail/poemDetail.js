@@ -16,7 +16,7 @@ Page({
   
   onLoad: function (options) {  
     const that = this;  
-    const poemId = options.id; // 假设从上一个页面通过options传递了诗词的id  
+    const poemId = options.id || '1104052ed0fc'; // 从上一个页面通过options传递了诗词的id  
     const POEM_DETAILS_API = `${API_BASE_URL}/poem_details?id=${poemId}`; // 拼接完整的接口地址  
   
     // 发起网络请求获取诗词详情  
@@ -26,13 +26,14 @@ Page({
       success: function (res) {  
         if (res.data && res.statusCode === 200) {  
           const poem = res.data;
-          poem.content = poem.content.replace('\\n', '<br>');
-          poem.yiwen = poem.yiwen.replace('\\n', '<br>');
-          poem.zhailu = poem.zhailu.replace('\\n', '<br>');
+          console.log('content-改前：',poem.content);
+          poem.content = poem.content.replace(/\\n/g, '<br>');
+          poem.yiwen = poem.yiwen.replace(/\\n/g, '<br>');
+          poem.zhailu = poem.zhailu.replace(/\\n/g, '<br>');
+          console.log('content-改后：',poem.content);
           that.setData({  
             poem 
           });  
-          console.log('content：',poem.content);
         } else {  
           console.error('获取诗词详情失败', res);  
         }  
