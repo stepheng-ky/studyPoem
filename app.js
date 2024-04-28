@@ -25,7 +25,6 @@ App({
             success: function(response) {  
               if (response.data.openid) {  
                 // 成功获取openid，进行后续操作  
-                console.log('res.code:',res.code);
                 console.log('response.data:',response.data);
               } else {  
                 // 处理错误  
