@@ -1,11 +1,11 @@
 <!-- pages/study/study.wxml -->  
 <view class="study-container">  
-  <view class="plan-name">{{studyPlan.planName}}</view>  
+  <view class="plan-name">{{planName}}</view>  
   <view class="plan-line"></view> <!-- 添加灰色线条 -->  
   <view class="progress-info">  
     <view class="progress-data-wrapper">  
       <view class="progress-title">天数</view>  
-      <view class="progress-data">{{studyPlan.learnedDays}}天</view>  
+      <view class="progress-data">{{learnedDays}}天</view>  
     </view>  
     <view class="progress-data-wrapper">  
       <view class="progress-title">已学习</view>  
@@ -32,8 +32,8 @@
   <view class="poem-list" wx:if="{{currentTab === 'unlearned'}}">  
     <block wx:if="{{unlearnedCount}}">  
       <block wx:for="{{unlearnedPoems}}" wx:key="id">  
-        <view class="poem-item">  
-          <text class="poem-name">{{item.name}}</text>  
+        <view class="poem-item" bindtap="goToPoemDetail" data-poem-id="{{item.id}}">  
+          <text class="poem-name">{{item.title}}</text>  
           <!-- <button bindtap="tapToMarkLearned" data-poem-id="{{item.id}}" class="tap-to-mark-learned">打卡</button>   -->
         </view>  
       </block> 
@@ -44,8 +44,8 @@
   <view class="poem-list" wx:if="{{currentTab === 'learned'}}">  
     <block wx:if="{{learnedCount}}">  
       <block wx:for="{{learnedPoems}}" wx:key="id">  
-        <view class="poem-item">  
-          <text class="poem-name">{{item.name}}</text>  
+        <view class="poem-item" bindtap="goToPoemDetail" data-poem-id="{{item.id}}">  
+          <text class="poem-name">{{item.title}}</text>  
         </view>  
       </block>  
     </block>  
