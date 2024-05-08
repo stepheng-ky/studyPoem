@@ -13,7 +13,7 @@ App({
     wx.login({  
       success: function(res) {  
         if (res.code) {  
-          console.log('res.code:',res.code);
+          // console.log('res.code:',res.code);
           // 发起网络请求  
           const RANDOM_POEM_API = `${API_BASE_URL}/openid`; // 拼接完整的接口地址
           wx.request({  
@@ -25,7 +25,7 @@ App({
             success: function(response) {  
               if (response.data.openid) {  
                 // 成功获取openid，进行后续操作  
-                console.log('response.data:',response.data);
+                // console.log('response.data:',response.data);
               } else {  
                 // 处理错误  
                 console.error('Error:', response.data.error);  

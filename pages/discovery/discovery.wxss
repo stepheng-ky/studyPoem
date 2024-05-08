@@ -57,3 +57,46 @@ button {
   color: #666; /* 文本颜色为深灰色 */    
   font-size: 14px; /* 字体大小为14像素 */    
 }
+
+.search-result {
+  margin-top: 20px; 
+  margin-left: 20px; 
+  margin-right: 20px; 
+}
+
+.search-result-header {  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center; 
+} 
+
+.search-result-title {  
+  font-size: 14px;  
+  margin-bottom: 5px; 
+}  
+
+.search-result-author {  
+  font-size: 12px; 
+  color: gray;  
+  margin-bottom: 5px; 
+} 
+
+.search-result-content { 
+  font-size: 12px;  
+  color: gray;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 1; /* 限制显示一行 */  
+  -webkit-box-orient: vertical;  
+}  
+
+.search-result-separator {  
+  border-top: 1px solid #ccc;
+  margin: 10px 0;   
+}
+.highlight {  
+  /* 高亮样式 */  
+  color: yellow;  
+  font-weight: bold;  
+}

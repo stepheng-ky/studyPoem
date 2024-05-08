@@ -1,2 +1,4 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="container">
+  <text>页面开发中...敬请期待...</text>
+</view>

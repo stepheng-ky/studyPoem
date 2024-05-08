@@ -34,7 +34,6 @@ Page({
             currentPoemzhailu1,
             currentPoemzhailu2,  
           });  
-          console.log('id:',id,',author:',author,',zhailu:',zhailu);
         } else {  
           // 处理请求失败的情况  
           console.error('获取诗词失败', res);  
@@ -49,7 +48,6 @@ Page({
   goToPoemDetails: function() {  
     // 获取当前页面的currentPoemId
     const { currentPoemId } = this.data; 
-    console.log('currentPoemId:',currentPoemId); 
     // 执行页面跳转，并传递 id 参数  
     wx.navigateTo({  
       url: `/pages/poemDetail/poemDetail?id=${currentPoemId}`  

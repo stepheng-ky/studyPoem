@@ -6,5 +6,24 @@
     <input type="text" placeholder="搜索诗词、作者、朝代" bindinput="handleInput" class="search-input" />  
     <button bindtap="handleSearch">搜索</button>  
   </view>  
-  <text class="search-tip">请输入关键字检索诗词名称/诗词内容/诗词作者/朝代等。</text>  
+  <!-- 根据 searchResult 是否为空来切换展示的内容 -->  
+  <view wx:if="{{searchResult.length === 0}}">  
+    <text class="search-tip">{{searchTip}}</text>  
+  </view>  
+  <view wx:else>  
+    <!-- 如果 searchResult 不为空，按行展示搜索结果 -->  
+    <block wx:for="{{searchResult}}" wx:key="*this" wx:for-item="resultItem"> 
+      <view class="search-result" bindtap="goToPoemDetail" data-poem-id="{{resultItem.id}}">
+        <!-- 标题和作者 -->  
+        <view class="search-result-header">  
+          <text class="search-result-title">{{resultItem.title}}</text>  
+          <text class="search-result-author" style="text-align: right;">{{resultItem.author}}</text>  
+        </view>  
+        <!-- 内容 -->  
+        <text class="search-result-content">{{resultItem.content || '...'}}</text>  
+        <!-- 如果不是最后一个元素，显示横线分隔符 -->  
+        <view wx:if="{{index < searchResult.length - 1}}" class="search-result-separator"></view>
+      </view>    
+    </block>   
+  </view> 
 </view>

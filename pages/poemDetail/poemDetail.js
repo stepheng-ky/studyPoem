@@ -42,5 +42,5 @@ Page({
         console.error('请求失败', error);  
       }  
     });  
-  }  
+  },
 });
