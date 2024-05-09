@@ -1,33 +1,31 @@
 /* pages/category/category.wxss */
-.container {    
-  display: flex;    
-  background-color: #f0f0f096; /* 设置背景颜色为浅灰色半透明 */    
-  height: 100vh; /* 设置容器高度为视口高度 */    
-  width: 100%;  
-  padding-left: 80rpx; /* 保留左侧内边距 */  
-  padding-top: 80rpx; /* 移除顶部内边距 */  
-  padding-right: 80rpx; /* 可以根据需要添加右侧内边距 */  
-  padding-bottom: 80rpx; /* 可以根据需要添加底部内边距 */  
+/* 容器样式 */  
+.container {  
+  display: flex;  
+  flex-direction: column; /* 默认为列布局，这里显式声明以提高可读性 */  
+  background-color: #f0f0f096;  
+  height: 100vh;  
+  padding: 50rpx;  
+  padding-bottom: 80rpx;  
+}  
+.category-container{  
+}
+.second-level-category{
+  font-size: 30rpx;
+  margin-bottom: 40rpx;
 }
 
-.category-container {  
-  display: flex;  
-  flex-wrap: wrap;  
-  justify-content: space-between; /* 根据需要调整元素之间的间距 */  
-}  
-  
 .category-title {  
-  margin-bottom: 30rpx; /* 减小元素之间的垂直间距 */    
-  font-size: 35rpx;
-  display: flex; /* 使用flex布局使内容居中 */  
+  font-size: 25rpx;
 } 
-.category-author {  
-  margin-bottom: 30rpx; /* 减小元素之间的垂直间距 */    
-  font-size: 35rpx;
-  display: flex; /* 使用flex布局使内容居中 */  
+.category-separator {  
+  border-top: 1px solid #ccc;
+  margin: 5px;   
 }
+
 .no-poems-tip{
   font-size: 38rpx;
   color: red;
   margin-top: 100rpx;     
+  text-align: center; /* 居中显示 */  
 }

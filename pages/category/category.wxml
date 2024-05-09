@@ -1,12 +1,19 @@
 <!--pages/category/category.wxml-->
 <view class="container">  
-  <view class="category-container">  
-    <block wx:if="{{category.poems.length === 0}}">  
-      <text class="no-poems-tip">暂无诗歌内容，请等待系统更新。</text>  
-    </block> 
-    <block wx:for="{{category.poems}}" wx:key="*this" wx:for-index="index">  
-      <text class="category-title" bindtap="goToPoemDetails" data-index="{{index}}">{{item.title}} ({{item.author_short}})</text>  
-      <text class="category-author">{{item.second_level_category}} </text>  
-    </block>  
-  </view> 
+  <!-- 数据为空 -->
+  <block wx:if="{{category.poems.length === 0}}">  
+    <text class="no-poems-tip">暂无诗歌内容，请等待系统更新。</text>  
+  </block> 
+  <!-- 遍历poems数组 -->
+  <block wx:for="{{category.poems}}" wx:key="*this" wx:for-index="index1">  
+    <view class = "category-container">
+      <text class = "second-level-category"> {{item.second_level_category}} </text>
+      <block wx:for="{{item.second_level_poems}}" wx:key="*this" wx:for-index="index2">  
+        <view >  
+          <text class="category-title" bindtap="goToPoemDetails" data-index1="{{index1}}" data-index2="{{index2}}">{{item.title}} ({{item.author_short}})</text>  
+        </view>  
+        <view class="category-separator"></view>
+      </block>
+    </view>
+  </block>  
 </view>

@@ -36,10 +36,9 @@ Page({
   } , 
   goToPoemDetails: function(e) {  
     // 获取当前页面的currentPoemId
-    const index = e.currentTarget.dataset.index;
-    console.log('index:',index);
-    const { id } = this.data.category.poems[index]; 
-    console.log('currentPoemId:',id); 
+    const index1 = e.currentTarget.dataset.index1;
+    const index2 = e.currentTarget.dataset.index2;
+    const { id } = this.data.category.poems[index1].second_level_poems[index2]; 
     // 执行页面跳转，并传递 id 参数  
     wx.navigateTo({  
       url: `/pages/poemDetail/poemDetail?id=${id}`  

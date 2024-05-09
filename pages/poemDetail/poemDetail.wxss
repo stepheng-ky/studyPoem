@@ -48,10 +48,13 @@
   font-weight: bold;  
   color: rgb(184, 111, 111);  
   margin-bottom: 10rpx;  
+  margin-left: 10rpx;  
 }  
 .poem-yiwen {  
   margin-top: 10rpx;  
   font-size: 30rpx;  
   color: #666;  
-  margin-bottom: 20rpx;  
+  margin-bottom: 20rpx;    
+  margin-right: 40rpx;   
+  margin-left: 10rpx; 
 }
