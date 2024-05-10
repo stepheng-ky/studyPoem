@@ -20,7 +20,6 @@ Page({
   handleSearch: function() {  
     // 获取输入框的内容  
     const searchInput = this.data.searchInput;  
-    console.log('searchInput:',searchInput);
     // 如果输入内容不为空，则调用接口获取搜索结果  
     if (searchInput) {  
       this.get_search_result(searchInput);  

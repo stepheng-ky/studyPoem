@@ -10,7 +10,6 @@ Page({
   onLoad: function (options) {  
     const that = this;  
     const categoryId = options.category_id || '1'; // 从上一个页面通过options传递了category_id
-    console.log('category页面：category_id',categoryId);
     const CATEGORY_API = `${API_BASE_URL}/category?category_id=${categoryId}`; // 拼接完整的接口地址  
     // 发起网络请求获取诗词详情  
     wx.request({  
@@ -19,7 +18,6 @@ Page({
       success: function (res) {  
         if (res.data && res.statusCode === 200) {  
           const category = res.data;
-          console.log('category：',category);
           that.setData({  
             category 
           });  

@@ -1,16 +1,16 @@
 <view class="page" >
   <view class="container" bindtap="goToPoemDetails">
     <view class="poem-author">
-      <text wx:for="{{currentPoemAuthor}}" wx:for-item="line" >{{line}}</text>
+      <text wx:for="{{currentPoemAuthor}}" wx:for-item="line" wx:key="*this">{{line}}</text>
     </view>
     <view class="poem-content0">
-      <text  wx:for="{{currentPoemzhailu0}}" wx:for-item="line" >{{line}}</text>
+      <text  wx:for="{{currentPoemzhailu0}}" wx:for-item="line" wx:key="*this">{{line}}</text>
     </view>
     <view class="poem-content1">
-      <text  wx:for="{{currentPoemzhailu1}}" wx:for-item="line" >{{line}}</text>
+      <text  wx:for="{{currentPoemzhailu1}}" wx:for-item="line" wx:key="*this">{{line}}</text>
     </view>
     <view class="poem-content2">
-      <text  wx:for="{{currentPoemzhailu2}}" wx:for-item="line" >{{line}}</text>
+      <text  wx:for="{{currentPoemzhailu2}}" wx:for-item="line" wx:key="*this">{{line}}</text>
     </view>
   </view>
 </view>

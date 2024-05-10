@@ -21,7 +21,6 @@ Page({
         if (res.data && res.statusCode === 200) {  
           // 接口返回的数据结构是 [{"category_id":1,"category_name":"小学古诗"}]
           const categoryData = res.data;
-          console.log('categoryData:',categoryData);
           that.setData({  
             categoryNames: categoryData.map(item => item.category_name),  
             categoryIds: categoryData.map(item => item.category_id),   
@@ -41,8 +40,6 @@ Page({
     const index = e.currentTarget.dataset.index; // 获取点击事件的索引  
     const categoryId = this.data.categoryIds[index]; // 通过索引获取对应的categoryId  
     // const categoryId =1;
-    console.log('lib跳转前参数categoryId:', categoryId);  
-    console.log('lib跳转前参数index:', index);  
     // 执行页面跳转，并传递 id 参数  
     wx.navigateTo({  
       url: `/pages/category/category?category_id=${categoryId}`  

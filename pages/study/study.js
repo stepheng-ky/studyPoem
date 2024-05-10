@@ -60,6 +60,8 @@ Page({
           // 计算已学习古诗词数量和总数等 
           let unlearnedPoems = poems.filter(poem => !poem.is_learned);
           let learnedPoems = poems.filter(poem => poem.is_learned) ;
+          // 按learn_time倒序排序
+          learnedPoems.sort((a, b) => new Date(b.learn_time) - new Date(a.learn_time));
           let learnedCount = learnedPoems.length;
           let unlearnedCount = unlearnedPoems.length;
           let totalPoemsCount = poems.length;  
@@ -72,9 +74,9 @@ Page({
             totalPoemsCount,
             progressPercentage,
           });  
-          // 打印数据
-          console.log('计划',that.data.planName,'已学习',that.data.learnedDays,'天.共有',totalPoemsCount,'首古诗,已学习',learnedCount,'首,未学习',unlearnedCount,'首,学习进度',progressPercentage,
-                      '%.')
+          // // 打印数据
+          // console.log('计划',that.data.planName,'已学习',that.data.learnedDays,'天.共有',totalPoemsCount,'首古诗,已学习',learnedCount,'首,未学习',unlearnedCount,'首,学习进度',progressPercentage,
+          //             '%.')
         } else {  
           console.error('获取学习计划详情失败', res);  
         } 
