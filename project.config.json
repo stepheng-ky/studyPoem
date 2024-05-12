@@ -22,7 +22,9 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "lazyCodeLoading": "requiredComponents",
+    "uglifyFileName": true
   },
   "condition": {},
   "editorSetting": {

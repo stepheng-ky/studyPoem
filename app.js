@@ -5,7 +5,6 @@ import { API_BASE_URL } from 'config.js';
 App({
   globalData: {  
     openid: '',  
-    session_key: '',
   }, 
   onLaunch() {
     // 展示本地存储能力
@@ -38,9 +37,8 @@ App({
                 },
                 success: (res) => {  // 使用箭头函数保持正确的 this 指向
                   if (res.data && res.statusCode === 200) {  
-                    // res.data：{"session_key":"session_key","openid":"openid"}
+                    // res.data：{"openid":"openid"}
                     this.globalData.openid = res.data.openid; 
-                    this.globalData.session_key = res.data.session_key; 
                   } else {  
                     console.error('获取用户openid失败', res);  
                   }  
