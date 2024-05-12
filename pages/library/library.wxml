@@ -1,4 +1,5 @@
 <!--pages/library/library.wxml-->
+<page class="page">
 <view class="container">  
   <view class="category-container">  
     <block wx:for="{{categoryNames}}" wx:key="index">  
@@ -7,3 +8,4 @@
     </block>  
   </view> 
 </view>
+</page>

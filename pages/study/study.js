@@ -134,7 +134,8 @@ Page({
   // }, 
   onLoad: function() {   
     const that = this;  
-    const user_id = '1'; // 传过来的userid，默认1先  
+    const app = getApp(); // 获取小程序实例
+    const user_id = app.globalData.openid; // 传userid=用户的openid  
     that.get_user_plans(user_id);
   },
   goToPoemDetail: function(event) {

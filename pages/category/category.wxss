@@ -8,8 +8,8 @@
   padding: 50rpx;  
   padding-bottom: 80rpx;  
 }  
-.category-container{  
-}
+/* .category-container{  
+} */
 .second-level-category{
   font-size: 30rpx;
   margin-bottom: 40rpx;

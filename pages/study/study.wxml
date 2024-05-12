@@ -1,54 +1,56 @@
 <!-- pages/study/study.wxml -->  
-<view class="study-container">  
-  <view class="plan-name">{{planName}}</view>  
-  <view class="plan-line"></view> <!-- 添加灰色线条 -->  
-  <view class="progress-info">  
-    <view class="progress-data-wrapper">  
-      <view class="progress-title">天数</view>  
-      <view class="progress-data">{{learnedDays}}天</view>  
+<page class="page">
+  <view class="study-container">  
+    <view class="plan-name">{{planName}}</view>  
+    <view class="plan-line"></view> <!-- 添加灰色线条 -->  
+    <view class="progress-info">  
+      <view class="progress-data-wrapper">  
+        <view class="progress-title">天数</view>  
+        <view class="progress-data">{{learnedDays}}天</view>  
+      </view>  
+      <view class="progress-data-wrapper">  
+        <view class="progress-title">已学习</view>  
+        <view class="progress-data">{{learnedCount}}/{{totalPoemsCount}}首</view>  
+      </view>  
+      <view class="progress-data-wrapper">  
+        <view class="progress-title">进度</view>  
+        <view class="progress-data">{{progressPercentage}}%</view>  
+      </view>  
     </view>  
-    <view class="progress-data-wrapper">  
-      <view class="progress-title">已学习</view>  
-      <view class="progress-data">{{learnedCount}}/{{totalPoemsCount}}首</view>  
-    </view>  
-    <view class="progress-data-wrapper">  
-      <view class="progress-title">进度</view>  
-      <view class="progress-data">{{progressPercentage}}%</view>  
-    </view>  
-  </view>  
-  <view class="progress-line"></view> <!-- 添加灰色线条 -->  
+    <view class="progress-line"></view> <!-- 添加灰色线条 -->  
 
-  <!-- 页签切换按钮 -->  
-  <view class="tab-bar">  
-    <button bindtap="switchTab" data-tab="unlearned" class="{{currentTab === 'unlearned' ? 'active' : ''}}">
-      未学习
-    </button>  
-    <button bindtap="switchTab" data-tab="learned" class="{{currentTab === 'learned' ? 'active' : ''}}">
-      已学习
-    </button>  
-  </view>
-  
-  <!-- 古诗列表 -->  
-  <view class="poem-list" wx:if="{{currentTab === 'unlearned'}}">  
-    <block wx:if="{{unlearnedCount}}">  
-      <block wx:for="{{unlearnedPoems}}" wx:key="id">  
-        <view class="poem-item" bindtap="goToPoemDetail" data-poem-id="{{item.id}}">  
-          <text class="poem-name">{{item.title}}</text>  
-          <!-- <button bindtap="tapToMarkLearned" data-poem-id="{{item.id}}" class="tap-to-mark-learned">打卡</button>   -->
-        </view>  
-      </block> 
-    </block>  
-    <view wx:else class="all-learned-message">恭喜！学习计划已全部完成~~</view>
-  </view>  
-  
-  <view class="poem-list" wx:if="{{currentTab === 'learned'}}">  
-    <block wx:if="{{learnedCount}}">  
-      <block wx:for="{{learnedPoems}}" wx:key="id">  
-        <view class="poem-item" bindtap="goToPoemDetail" data-poem-id="{{item.id}}">  
-          <text class="poem-name">{{item.title}}</text>  
-        </view>  
+    <!-- 页签切换按钮 -->  
+    <view class="tab-bar">  
+      <button bindtap="switchTab" data-tab="unlearned" class="{{currentTab === 'unlearned' ? 'active' : ''}}">
+        未学习
+      </button>  
+      <button bindtap="switchTab" data-tab="learned" class="{{currentTab === 'learned' ? 'active' : ''}}">
+        已学习
+      </button>  
+    </view>
+    
+    <!-- 古诗列表 -->  
+    <view class="poem-list" wx:if="{{currentTab === 'unlearned'}}">  
+      <block wx:if="{{unlearnedCount}}">  
+        <block wx:for="{{unlearnedPoems}}" wx:key="id">  
+          <view class="poem-item" bindtap="goToPoemDetail" data-poem-id="{{item.id}}">  
+            <text class="poem-name">{{item.title}}</text>  
+            <!-- <button bindtap="tapToMarkLearned" data-poem-id="{{item.id}}" class="tap-to-mark-learned">打卡</button>   -->
+          </view>  
+        </block> 
       </block>  
-    </block>  
-    <view wx:else class="no-learned-message">还没有开始学习。抓紧开始吧！</view>
-  </view> 
-</view>
+      <view wx:else class="all-learned-message">恭喜！学习计划已全部完成~~</view>
+    </view>  
+    
+    <view class="poem-list" wx:if="{{currentTab === 'learned'}}">  
+      <block wx:if="{{learnedCount}}">  
+        <block wx:for="{{learnedPoems}}" wx:key="id">  
+          <view class="poem-item" bindtap="goToPoemDetail" data-poem-id="{{item.id}}">  
+            <text class="poem-name">{{item.title}}</text>  
+          </view>  
+        </block>  
+      </block>  
+      <view wx:else class="no-learned-message">还没有开始学习。抓紧开始吧！</view>
+    </view> 
+  </view>
+</page>

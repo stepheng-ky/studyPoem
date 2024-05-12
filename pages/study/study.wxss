@@ -1,8 +1,7 @@
 /* pages/study/study.wxss */ /* 定义study页面的样式表 */  
-  
+
 .study-container {  
   padding: 35rpx; /*设置容器的内边距 */ 
-  background-color: #f0f0f096; /* 设置背景颜色为浅灰色半透明 */  
   height: 100vh; /* 设置容器高度为视口高度 */    
 }  
   

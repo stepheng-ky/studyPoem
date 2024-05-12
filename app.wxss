@@ -1,4 +1,7 @@
 /**app.wxss**/
+page {
+  background-color: #f0f0f096; /* 设置全局背景颜色为浅灰色半透明 */
+}
 .container {
   height: 100%;
   display: flex;

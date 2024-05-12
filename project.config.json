@@ -2,7 +2,12 @@
   "compileType": "miniprogram",
   "libVersion": "trial",
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      {
+        "value": "/minitest",
+        "type": "folder"
+      }
+    ],
     "include": []
   },
   "setting": {
@@ -24,5 +29,6 @@
     "tabIndent": "auto",
     "tabSize": 2
   },
-  "appid": "wxef3003881b176b48"
+  "appid": "wxef3003881b176b48",
+  "testRoot": "minitest/"
 }
