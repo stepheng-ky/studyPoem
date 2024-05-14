@@ -117,14 +117,7 @@ Page({
       success: (res) => {
         if (res.confirm) {
         // 学习时间
-        let learn_time = new Intl.DateTimeFormat('en-US', {
-          year: 'numeric',
-          month: '2-digit',
-          day: '2-digit',
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit'
-        }).format(new Date());
+        let learn_time = new Date();
         learnedPoem.learn_time = learn_time;//更新learnedPoem的学习时间
         // 添加到已学习list,从未学习中移除
         const learnedPoems = this.data.learnedPoems;

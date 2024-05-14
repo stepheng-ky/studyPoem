@@ -108,7 +108,7 @@
   margin-right: 5px; /* 设置按钮距离右侧5px */
   color: rgb(236, 148, 148); /* 设置文字颜色 */
   font-weight: bold;  
-  font-size: 12px; /* 设置字体大小 */
+  font-size: 15px; /* 设置字体大小 */
   padding: 0px 15px; /* 调整内边距 */
   border-radius: 5px; /* 添加圆角 */
   cursor: pointer; /* 鼠标指针样式为手型 */
