@@ -4,6 +4,6 @@
   "setting": {
     "compileHotReLoad": true,
     "preloadBackgroundData": false,
-    "autoAudits": true
+    "autoAudits": false
   }
 }

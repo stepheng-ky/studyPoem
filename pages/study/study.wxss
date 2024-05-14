@@ -18,7 +18,7 @@
   height: 2px;  
   background-color: lightgrey; /* 灰色线条颜色 */  
   margin-top: 20rpx; /* 与计划名之间的间距 */  
-  margin-bottom: 40rpx; /* 与进度信息之间的间距 */  
+  margin-bottom: 30rpx; /* 与进度信息之间的间距 */  
 }  
 /* 线条2 */
 .progress-line {  
@@ -26,7 +26,6 @@
   height: 6px;  
   background-color: lightgrey; /* 灰色线条颜色 */  
   margin-top: 30rpx; /* 与计划名之间的间距 */  
-  margin-bottom: 50rpx; /* 与进度信息之间的间距 */  
 }  
 /* 进度信息的容器样式 */  
 .progress-info {  
@@ -83,14 +82,14 @@
 }
   
 .poem-list {  
-  margin-top: 10px;  
+  margin-top: 0px;  
 }  
   
 .poem-item {  
   display: flex;  
   justify-content: space-between;  
   align-items: center;  
-  padding: 10px;  
+  padding: 5px 10px;  
   border-bottom: 1px solid #ddd;  
 }  
 .all-learned-message, .no-learned-message {  
@@ -103,4 +102,15 @@
 }
 .no-learned-message {  
   color: red;  
+}
+
+.tap-to-mark-learned,.tap-to-mark-unlearned {
+  margin-right: 5px; /* 设置按钮距离右侧5px */
+  color: rgb(236, 148, 148); /* 设置文字颜色 */
+  font-weight: bold;  
+  font-size: 12px; /* 设置字体大小 */
+  padding: 0px 15px; /* 调整内边距 */
+  border-radius: 5px; /* 添加圆角 */
+  cursor: pointer; /* 鼠标指针样式为手型 */
+  border: 1px solid rgb(238, 148, 148); /* 设置边框颜色和宽度 */
 }
