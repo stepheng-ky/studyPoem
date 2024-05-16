@@ -1,4 +1,9 @@
 <!--pages/mine/mine.wxml-->
 <view class="container">
-  <text>页面开发中...敬请期待...</text>
+  <!-- <text>页面开发中...敬请期待...</text> -->
+  <text class="">关于我们\n\n</text>
+  <text>古诗词如灵动童心，启迪幼儿文化感悟。</text>
+  <text>古诗词明灯启智，引导小学生文学探索。</text>
+  <text>古诗词涵情育人，引领中学生审美修养。</text>
+  <text>古诗词智慧寄托，大学生心灵寻觅。</text>
 </view>
