@@ -66,3 +66,10 @@
 4. 诗词详情页新增个人的朗读音频播放按钮
 
 ## DEMO图
+   <img src="img/demo/一、首页.jpg" alt="Image" width="200" height="450">
+   <img src="img/demo/二、诗词详情页.jpg" alt="Image" width="200" height="450">
+   <img src="img/demo/三、发现.jpg" alt="Image" width="200" height="450">
+   <img src="img/demo/四、学习1.jpg" alt="Image" width="200" height="450">
+   <img src="img/demo/四、学习2.jpg" alt="Image" width="200" height="450">
+   <img src="img/demo/七、诗库.jpg" alt="Image" width="200" height="450">
+   <img src="img/demo/八、诗词分类详情.jpg" alt="Image" width="200" height="450">
