@@ -18,6 +18,7 @@ Page({
       success: function (res) {  
         if (res.data && res.statusCode === 200) {  
           const category = res.data;
+          console.log('category:',category);
           that.setData({  
             category 
           });  

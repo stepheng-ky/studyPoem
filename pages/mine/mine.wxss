@@ -1,6 +1,6 @@
 /* pages/mine/mine.wxss */
 .container {
-  text-align: center;
-  font-size: large;
-  color: red;
+  text-align: left;
+  
+  font-size: 18px;
 }
