@@ -1,6 +1,7 @@
 # 一木古诗词
 
-**原生微信小程序，学习古诗词。**
+**原生微信小程序，学习古诗词。**  
+对应后端服务：https://github.com/stepheng-ky/studypoem_server  
 
 ## 功能介绍
 ### 一、首页
