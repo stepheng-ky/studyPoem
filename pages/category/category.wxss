@@ -34,3 +34,18 @@
   margin-top: 100rpx;  /* 设置顶部外边距为100rpx */
   text-align: center; /* 居中显示 */  
 }
+
+.error-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-text {
+  color: red;
+  font-weight: bold;
+}

@@ -63,3 +63,18 @@
   flex-direction: column; /* 使内容竖直排列 */
   font-family: '华文隶书'; /* 设置字体 */
 }
+
+.error-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-text {
+  color: red;
+  font-weight: bold;
+}

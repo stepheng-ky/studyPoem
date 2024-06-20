@@ -72,13 +72,21 @@ Page({
           // 隐藏加载动画
           wx.hideLoading();
         } else {  
-          console.error('获取搜索结果失败', res);  
-        } 
+          // 处理请求失败的情况  
+          that.setData({
+            errorMessage: '获取搜索结果失败，请重试...'
+          });
+          wx.hideLoading();
+        }  
       },  
       fail: function (error) {  
-        console.error('get_search_result请求失败', error);  
-      } 
-    })
+        // 请求失败后的回调函数  
+          that.setData({
+            errorMessage: '请求失败，请检查网络连接...'
+          });
+          wx.hideLoading(); 
+      }  
+    });
   } ,
   goToPoemDetail: function(event) {
     const poemId = event.currentTarget.dataset.poemId;

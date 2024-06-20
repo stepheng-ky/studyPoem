@@ -10,7 +10,8 @@ Page({
       author: '',  
       content: '',  
       yiwen: '',
-      zhailu:'' 
+      zhailu:'' ,
+      errorMessage:'',
     }  
   },  
   
@@ -22,7 +23,7 @@ Page({
       mask: true,
       // image: '/img/app/loading.gif'
     });
-    const poemId = options.id || '1104052ed0fc'; // 从上一个页面通过options传递了诗词的id  
+    const poemId = options.id; // 从上一个页面通过options传递了诗词的id  
     const POEM_DETAILS_API = `${API_BASE_URL}/poem_details?id=${poemId}`; // 拼接完整的接口地址  
   
     // 发起网络请求获取诗词详情  
@@ -42,13 +43,22 @@ Page({
           });  
           // 隐藏加载动画
           wx.hideLoading();
-        } else {  
-          console.error('获取诗词详情失败', res);  
+        }  else {  
+          console.log('失败~~');  
+          // 处理请求失败的情况  
+          that.setData({
+            errorMessage: '获取诗词详情失败，请重试...'
+          });
+          wx.hideLoading();
         }  
       },  
       fail: function (error) {  
-        console.error('请求失败', error);  
+        // 请求失败后的回调函数  
+          that.setData({
+            errorMessage: '请求失败，请检查网络连接...'
+          });
+          wx.hideLoading(); 
       }  
-    });  
+    }); 
   },
 });

@@ -114,3 +114,19 @@
   cursor: pointer; /* 鼠标指针样式为手型 */
   border: 1px solid rgb(238, 148, 148); /* 设置边框颜色和宽度 */
 }
+
+
+.error-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-text {
+  color: red;
+  font-weight: bold;
+}

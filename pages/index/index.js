@@ -8,6 +8,7 @@ Page({
     currentPoemzhailu0: '',
     currentPoemzhailu1: '',
     currentPoemzhailu2: '',
+    errorMessage: '',
   },
   onLoad: function () {
     // 保存当前页面的this引用  
@@ -16,14 +17,14 @@ Page({
     wx.showLoading({
       // title: '加载中...',
       mask: true,
-      image: '/img/app/loading.gif'
+      // image: '/img/app/loading.gif'
     });
     const RANDOM_POEM_API = `${API_BASE_URL}/random_poem`; // 拼接完整的接口地址  
     // 发起网络请求获取随机诗词  
     wx.request({  
       url: RANDOM_POEM_API, // 接口地址  
       method: 'GET', // 请求方法  
-      success: function (res) {  
+      success: function (res) {
         // 请求成功后的回调函数  
         if (res.data && res.statusCode === 200) {  
           // 接口返回的数据结构是 {"author":"","content":"","id":"","title":"","yiwen":","zhailu":""}
@@ -44,12 +45,18 @@ Page({
           wx.hideLoading();
         } else {  
           // 处理请求失败的情况  
-          console.error('获取诗词失败', res);  
+          that.setData({
+            errorMessage: '获取诗词失败，请重试...'
+          });
+          wx.hideLoading();
         }  
       },  
       fail: function (error) {  
         // 请求失败后的回调函数  
-        console.error('请求失败', error);  
+          that.setData({
+            errorMessage: '请求失败，请检查网络连接...'
+          });
+          wx.hideLoading(); 
       }  
     });  
   },

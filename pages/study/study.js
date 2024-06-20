@@ -54,11 +54,19 @@ Page({
           // 获取plan详细信息
           that.get_plan_details(default_plan.plan_id);
         } else {  
-          console.error('获取用户学习计划失败', res);  
+          // 处理请求失败的情况  
+          that.setData({
+            errorMessage: '获取学习计划失败，请重试...'
+          });
+          wx.hideLoading();
         }  
       },  
       fail: function (error) {  
-        console.error('get_user_plans请求失败', error);  
+        // 请求失败后的回调函数  
+          that.setData({
+            errorMessage: '请求失败，请检查网络连接...'
+          });
+          wx.hideLoading(); 
       }  
     });
   },
@@ -92,12 +100,20 @@ Page({
         // 隐藏加载动画
         wx.hideLoading();
         } else {  
-          console.error('获取学习计划详情失败', res);  
-        } 
+          // 处理请求失败的情况  
+          that.setData({
+            errorMessage: '获取学习计划详情失败，请重试...'
+          });
+          wx.hideLoading();
+        }  
       },  
       fail: function (error) {  
-        console.error('get_plan_details请求失败', error);  
-      } 
+        // 请求失败后的回调函数  
+          that.setData({
+            errorMessage: '请求失败，请检查网络连接...'
+          });
+          wx.hideLoading(); 
+      }  
     });
   },
   // ############### 切换页签时，更新 currentTab 的值  

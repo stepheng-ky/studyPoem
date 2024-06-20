@@ -13,5 +13,8 @@
       <text  wx:for="{{currentPoemzhailu2}}" wx:for-item="line" wx:key="*this">{{line}}</text>
     </view>
   </view>
+  <view class="error-container">
+    <text wx:if="{{errorMessage}}" class="error-text">{{errorMessage}}</text>
+  </view>
 </view>
 

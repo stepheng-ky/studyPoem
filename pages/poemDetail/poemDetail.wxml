@@ -15,4 +15,7 @@
   <view class="poem-yiwen">  
     <rich-text nodes="{{poem.yiwen}}"></rich-text>  
   </view>  
+  <view class="error-container">
+    <text wx:if="{{errorMessage}}" class="error-text">{{errorMessage}}</text>
+  </view>
 </view>

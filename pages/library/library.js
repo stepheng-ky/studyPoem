@@ -35,12 +35,18 @@ Page({
           wx.hideLoading();
         } else {  
           // 处理请求失败的情况  
-          console.error('获取诗词失败', res);  
+          that.setData({
+            errorMessage: '获取诗库失败，请重试...'
+          });
+          wx.hideLoading();
         }  
       },  
       fail: function (error) {  
         // 请求失败后的回调函数  
-        console.error('请求失败', error);  
+          that.setData({
+            errorMessage: '请求失败，请检查网络连接...'
+          });
+          wx.hideLoading(); 
       }  
     });  
   },
