@@ -16,6 +16,12 @@ Page({
   
   onLoad: function (options) {  
     const that = this;  
+    // 显示加载动画
+    wx.showLoading({
+      // title: '加载中...',
+      mask: true,
+      // image: '/img/app/loading.gif'
+    });
     const poemId = options.id || '1104052ed0fc'; // 从上一个页面通过options传递了诗词的id  
     const POEM_DETAILS_API = `${API_BASE_URL}/poem_details?id=${poemId}`; // 拼接完整的接口地址  
   
@@ -34,6 +40,8 @@ Page({
           that.setData({  
             poem 
           });  
+          // 隐藏加载动画
+          wx.hideLoading();
         } else {  
           console.error('获取诗词详情失败', res);  
         }  

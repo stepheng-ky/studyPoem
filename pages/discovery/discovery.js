@@ -22,6 +22,12 @@ Page({
     const searchInput = this.data.searchInput;  
     // 如果输入内容不为空，则调用接口获取搜索结果  
     if (searchInput) {  
+      // 显示加载动画
+      wx.showLoading({
+        // title: '加载中...',
+        mask: true,
+        // image: '/img/app/loading.gif'
+      });
       this.get_search_result(searchInput);  
     } else {  
       //搜索结果置空
@@ -63,6 +69,8 @@ Page({
               searchResult: [] // 确保数据也被清空  
             });  
           }  ;
+          // 隐藏加载动画
+          wx.hideLoading();
         } else {  
           console.error('获取搜索结果失败', res);  
         } 

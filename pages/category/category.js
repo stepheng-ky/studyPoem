@@ -9,6 +9,12 @@ Page({
   
   onLoad: function (options) {  
     const that = this;  
+    // 显示加载动画
+    wx.showLoading({
+      // title: '加载中...',
+      mask: true,
+      // image: '/img/app/loading.gif'
+    });
     const categoryId = options.category_id || '1'; // 从上一个页面通过options传递了category_id
     const CATEGORY_API = `${API_BASE_URL}/category?category_id=${categoryId}`; // 拼接完整的接口地址  
     // 发起网络请求获取诗词详情  
@@ -24,6 +30,8 @@ Page({
           });  
           // 动态修改导航栏标题
           wx.setNavigationBarTitle({ title: category.category_name });
+          // 隐藏加载动画
+          wx.hideLoading();
         } else {  
           console.error('获取诗词详情失败', res);  
         }  

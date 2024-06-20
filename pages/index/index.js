@@ -12,6 +12,12 @@ Page({
   onLoad: function () {
     // 保存当前页面的this引用  
     const that = this; 
+    // 显示加载动画
+    wx.showLoading({
+      // title: '加载中...',
+      mask: true,
+      image: '/img/app/loading.gif'
+    });
     const RANDOM_POEM_API = `${API_BASE_URL}/random_poem`; // 拼接完整的接口地址  
     // 发起网络请求获取随机诗词  
     wx.request({  
@@ -34,6 +40,8 @@ Page({
             currentPoemzhailu1,
             currentPoemzhailu2,  
           });  
+          // 隐藏加载动画
+          wx.hideLoading();
         } else {  
           // 处理请求失败的情况  
           console.error('获取诗词失败', res);  

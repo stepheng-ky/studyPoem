@@ -17,6 +17,12 @@ Page({
   },  
   onLoad: function() {   
     const that = this;  
+    // 显示加载动画
+    wx.showLoading({
+      // title: '加载中...',
+      mask: true,
+      // image: '/img/app/loading.gif'
+    });
     const app = getApp(); // 获取小程序实例
     const user_id = app.globalData.openid; // 传userid=用户的openid  
     that.get_user_plans(user_id); //获取plans
@@ -83,6 +89,8 @@ Page({
             totalPoemsCount,
             progressPercentage,
           });  
+        // 隐藏加载动画
+        wx.hideLoading();
         } else {  
           console.error('获取学习计划详情失败', res);  
         } 
