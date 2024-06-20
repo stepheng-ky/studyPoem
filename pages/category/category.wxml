@@ -10,7 +10,7 @@
       <view class = "category-container">
         <text class = "second-level-category"> {{item.second_level_category}} </text>
         <block wx:for="{{item.second_level_poems}}" wx:key="index2" wx:for-index="index2">  
-          <text class="category-title" bindtap="goToPoemDetails" data-index1="{{index1}}" data-index2="{{index2}}">{{item.title}} ({{item.author_short}})</text>  
+          <text class="category-title" bindtap="goToPoemDetails" data-index1="{{index1}}" data-index2="{{index2}}">· {{item.title}} ({{item.author_short}})</text>  
         </block>
       </view>
     </block>  

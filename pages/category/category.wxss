@@ -4,24 +4,23 @@
   display: flex;  /* 使用 Flex 布局 */
   flex-direction: column; /* 默认为列布局，这里显式声明以提高可读性 */  
   background-color: #f0f0f096;  /* 设置背景颜色为淡灰色 */
-  padding: 20rpx;  /* 设置内边距为50rpx */
+  padding: 20rpx;  /* 设置内边距为20rpx */
 }  
 
 .category-container {
-  align-items: flex-start; /* 左对齐 */  
   display: flex;  /* 使用 Flex 布局 */
   flex-direction: column;  /* 默认为列布局 */
 }
 
 .second-level-category {
-  font-size: 35rpx;  /* 设置字体大小为30rpx */
+  font-size: 30rpx;  /* 设置字体大小为30rpx */
   margin-top: 20rpx;  /* 设置顶部外边距为20rpx */
   margin-bottom: 20rpx;  /* 设置底部外边距为20rpx */
   font-weight: bold;  /* 设置字体加粗 */
 }
 
 .category-title {
-  font-size: 30rpx;  /* 设置字体大小为25rpx */
+  font-size: 25rpx;  /* 设置字体大小为25rpx */
   margin-left: 10px; /* 向右偏移10px */
   text-align: left; /* 左对齐 */
   margin-bottom: 15rpx;  /* 设置底部外边距为20rpx */
