@@ -78,3 +78,8 @@
    <img src="img/demo/四、学习2.jpg" alt="Image" width="200" height="450">
    <img src="img/demo/七、诗库.jpg" alt="Image" width="200" height="450">
    <img src="img/demo/八、诗词分类详情.jpg" alt="Image" width="200" height="450">
+
+
+## 配置
+- config.js  
+export const API_BASE_URL = 'https://domain.com';
