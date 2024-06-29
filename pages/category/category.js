@@ -24,10 +24,10 @@ Page({
       success: function (res) {  
         if (res.data && res.statusCode === 200) {  
           const category = res.data;
-          console.log('category:',category);
           that.setData({  
             category 
           });  
+          console.log('categ:',category);
           // 动态修改导航栏标题
           wx.setNavigationBarTitle({ title: category.category_name });
           // 隐藏加载动画

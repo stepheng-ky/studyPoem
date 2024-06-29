@@ -164,7 +164,6 @@ Page({
           },
           success: function(res) {
             if (res.data && res.statusCode === 200) {
-              console.log('诗歌',poemId,'打卡成功');
             } else {
               console.error('诗歌',poemId,'打卡失败', res);
             }
@@ -174,7 +173,6 @@ Page({
           }
         });
       } else if (res.cancel) {
-        console.log('取消打卡');
       }
     }
   });
@@ -210,7 +208,6 @@ Page({
           },
           success: function(res) {
             if (res.data && res.statusCode === 200) {
-              console.log('诗歌',poemId,'重新学习成功');
             } else {
               console.error('诗歌',poemId,'重新学习失败', res);
             }
@@ -220,7 +217,6 @@ Page({
           }
         });
       } else if (res.cancel) {
-        console.log('取消重新学习');
       }
     }
   });

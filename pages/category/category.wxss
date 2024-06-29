@@ -5,27 +5,47 @@
   flex-direction: column; /* 默认为列布局，这里显式声明以提高可读性 */  
   background-color: #f0f0f096;  /* 设置背景颜色为淡灰色 */
   padding: 20rpx;  /* 设置内边距为20rpx */
+  align-items: flex-start; /* 让容器内元素在交叉轴（垂直轴）上居左显示 */
 }  
 
 .category-container {
   display: flex;  /* 使用 Flex 布局 */
   flex-direction: column;  /* 默认为列布局 */
+  width: 90%;
 }
 
 .second-level-category {
   font-size: 30rpx;  /* 设置字体大小为30rpx */
   margin-top: 20rpx;  /* 设置顶部外边距为20rpx */
   margin-bottom: 20rpx;  /* 设置底部外边距为20rpx */
+  margin-left: 30rpx;  /* 设置底部外边距为20rpx */
   font-weight: bold;  /* 设置字体加粗 */
 }
 
+.poem-item {
+  display: flex; /* 将 poem-item 设置为 flex 容器 */
+  justify-content: space-between; /* 让标题和作者分别在两端对齐 */
+  align-items: center; /* 确保标题和作者在垂直方向上居中对齐 */
+  margin-top: 20rpx; /* 保持底部外边距 */
+}
+
 .category-title {
-  font-size: 25rpx;  /* 设置字体大小为25rpx */
-  margin-left: 10px; /* 向右偏移10px */
+  font-size: 28rpx;  /* 设置字体大小为25rpx */
+  margin-left: 40px; /* 向右偏移10px */
   text-align: left; /* 左对齐 */
-  margin-bottom: 15rpx;  /* 设置底部外边距为20rpx */
 } 
 
+.category-author {
+  font-size: 24rpx; /* 设置字体大小为24rpx */
+  color: gray;  
+}
+
+.separator {
+  height: 0.5px; /* 分隔线的厚度 */
+  background-color: #ccc; /* 分隔线的颜色 */
+  margin-top: 5px; 
+  margin-left: 70rpx; 
+}
 
 .no-poems-tip {
   font-size: 38rpx;  /* 设置字体大小为38rpx */

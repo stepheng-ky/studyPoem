@@ -46,7 +46,7 @@ Page({
         } else {  
           // 处理请求失败的情况  
           that.setData({
-            errorMessage: '获取诗词失败，请重试...'
+            errorMessage: '获取首页失败，请重试...'
           });
           wx.hideLoading();
         }  
