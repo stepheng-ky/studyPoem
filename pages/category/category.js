@@ -27,7 +27,6 @@ Page({
           that.setData({  
             category 
           });  
-          console.log('categ:',category);
           // 动态修改导航栏标题
           wx.setNavigationBarTitle({ title: category.category_name });
           // 隐藏加载动画
