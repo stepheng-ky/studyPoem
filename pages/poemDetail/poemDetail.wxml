@@ -9,7 +9,7 @@
       <rich-text  nodes="{{poem.content}}"></rich-text> 
       <button class="play-btn" :data-state="poem.isPlaying ? 'pause' : 'play'" 
               bindtap="playAudio">
-        {{ poem.isPlaying ? '暂停' : '播放' }}
+        {{ poem.isPlaying ? '暂停' : '朗读' }}
       </button> 
     </view>  
   </view>
