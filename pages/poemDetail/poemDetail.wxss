@@ -32,15 +32,16 @@
   right: -150rpx;
 }  
   
-.poem-content {  
-  margin-top: 20rpx;  
-  /* margin-left: 160rpx;  
-  margin-right: 160rpx;   */
-  font-size: 35rpx;  
-  line-height: 1.8;  
-  margin-bottom: 20rpx;  
+.poem-content {
+  display: flex; /* 使用Flex布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  justify-content: space-between; /* 垂直方向上均匀分配剩余空间 */
+  height: 100%; /* 设置为100%高度 */
+  position: relative; /* 相对定位用于定位播放按钮 */
   text-align: center;  
-}  
+  margin-bottom: 20px; /* 调整与 poem-yiwen-title 的间距 */
+}
+
  
 .poem-yiwen-title {  
   margin-top: 30rpx;  
@@ -72,4 +73,15 @@
 .error-text {
   color: red;
   font-weight: bold;
+}
+
+.play-btn {
+  position: absolute;
+  right: 40px;
+  bottom: -50px; /* 调整与 poem-content 的间距 */
+  padding: 0rpx 15rpx;
+  border-radius: 20%;
+  font-size: 30rpx;
+  background-color: lightgreen;
+  /* transition: background-color 0.3s; */
 }
