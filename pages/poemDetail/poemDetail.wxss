@@ -27,19 +27,21 @@
 }  
   
 .poem-author {  
-  font-size: 30rpx; 
+  font-size: 35rpx; 
   position: relative;
   right: -150rpx;
 }  
   
 .poem-content {
+  font-size: 35rpx; 
   display: flex; /* 使用Flex布局 */
   flex-direction: column; /* 子元素垂直排列 */
   justify-content: space-between; /* 垂直方向上均匀分配剩余空间 */
   height: 100%; /* 设置为100%高度 */
+  width: 90%;
   position: relative; /* 相对定位用于定位播放按钮 */
   text-align: center;  
-  margin-bottom: 20px; /* 调整与 poem-yiwen-title 的间距 */
+  margin-bottom: 30px; /* 调整与 poem-yiwen-title 的间距 */
 }
 
  

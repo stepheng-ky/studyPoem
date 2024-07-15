@@ -15,7 +15,7 @@
 }
 
 .second-level-category {
-  font-size: 30rpx;  /* 设置字体大小为30rpx */
+  font-size: 35rpx;  /* 设置字体大小为30rpx */
   margin-top: 20rpx;  /* 设置顶部外边距为20rpx */
   margin-bottom: 20rpx;  /* 设置底部外边距为20rpx */
   margin-left: 30rpx;  /* 设置底部外边距为20rpx */
@@ -30,7 +30,7 @@
 }
 
 .category-title {
-  font-size: 28rpx;  /* 设置字体大小为25rpx */
+  font-size: 30rpx;  /* 设置字体大小为25rpx */
   margin-left: 40px; /* 向右偏移10px */
   text-align: left; /* 左对齐 */
 } 

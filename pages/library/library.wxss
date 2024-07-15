@@ -20,8 +20,8 @@
 .category-name {  
   flex-basis: calc(50% - 30rpx); /* 假设你希望元素之间有10rpx的间距 */  
   margin-bottom: 30rpx; /* 减小元素之间的垂直间距 */    
-  font-size: 28rpx;
-  background-color: rgb(230, 227, 227);
+  font-size: 35rpx;
+  background-color: rgb(236, 233, 233);
   border-radius: 20rpx; /* 设置圆角大小 */  
   display: flex; /* 使用flex布局使内容居中 */  
   justify-content: center; /* 水平居中 */  
