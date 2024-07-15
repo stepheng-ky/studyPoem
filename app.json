@@ -6,7 +6,8 @@
     "pages/library/library",
     "pages/mine/mine",
     "pages/poemDetail/poemDetail",
-    "pages/category/category"    
+    "pages/category/category",
+    "pages/tts/tts"    
   ],
   "tabBar": {
     "list": [

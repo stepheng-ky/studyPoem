@@ -6,4 +6,6 @@
   <text>古诗词明灯启智，引导小学生文学探索。</text>
   <text>古诗词涵情育人，引领中学生审美修养。</text>
   <text>古诗词智慧寄托，大学生心灵寻觅。</text>
+
+  <button class="button-gototts" bindtap="goToTTS">语音合成</button>
 </view>

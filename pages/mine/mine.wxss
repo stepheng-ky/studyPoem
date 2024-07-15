@@ -1,6 +1,16 @@
 /* pages/mine/mine.wxss */
 .container {
-  text-align: left;
-  
+  margin-top: 30rpx;
   font-size: 18px;
+  display: flex;
+  align-items: center; 
+}
+
+.button-gototts{
+  padding: 0rpx 15rpx;
+  border-radius: 20%;
+  font-size: 30rpx;
+  background-color: lightgreen;
+  margin-top: 80rpx;
+  margin-left: 80rpx; 
 }
